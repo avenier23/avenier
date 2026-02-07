@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avenier Arellano — Virtual Assistant</title>
+  <meta name="description" content="Virtual Assistant services by Avenier Arellano: Social Media Management, Admin Tasks, Video Editing & UGC Content Creation." />
+
+  <style>
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#0b0b0c;
+      color:#f1f1f1;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin:auto}
+
+    header{
+      padding:24px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .header-flex{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    .logo{
+      font-weight:800;
+      font-size:18px;
+    }
+    .btn{
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      background:#b07a53;
+      color:#000;
+    }
+
+    /* HERO */
+    .hero{
+      padding:70px 0 40px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:32px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:clamp(34px,4vw,52px);
+      line-height:1.05;
+    }
+    .hero h1 span{color:#d2a279}
+    .hero p{
+      color:#b8b8bd;
+      max-width:52ch;
+      line-height:1.6;
+      margin:18px 0;
+    }
+
+    .card{
+      background:#151519;
+      border-radius:22px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    /* SERVICES */
+    section{padding:60px 0}
+    .section-title{text-align:center;margin-bottom:32px}
+    .section-title h2{font-size:32px}
+    .section-title p{color:#b8b8bd}
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+    .service{
+      background:#151519;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:22px;
+    }
+    .service h3{
+      margin:0 0 8px;
+      color:#d2a279;
+    }
+    .service p{
+      margin:0;
+      color:#b8b8bd;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    /* CTA */
+    .cta{
+      text-align:center;
+      background:linear-gradient(135deg,#b07a53,#d2a279);
+      color:#000;
+      border-radius:26px;
+      padding:46px 24px;
+    }
+    .cta h2{margin-bottom:12px}
+    .cta p{margin-bottom:24px}
+
+    footer{
+      text-align:center;
+      padding:24px 0;
+      font-size:13px;
+      color:#b8b8bd;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="logo">Avenier Arellano</div>
+    <a href="#contact" class="btn">Hire Me</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>I am a <span>Virtual Assistant</span><br>who helps your business grow</h1>
+      <p>
+        I help entrepreneurs, brands, and creators save time and scale faster
+        by handling daily operations, content, and digital tasks efficiently.
+      </p>
+      <a href="#services" class="btn">View My Services</a>
+    </div>
+
+    <div class="card">
+      <h3>Avenier Arellano</h3>
+      <p>
+        Virtual Assistant specializing in social media, admin support,
+        video editing, and UGC content creation.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-title">
+      <h2>My Services</h2>
+      <p>Reliable support tailored to your business needs</p>
+    </div>
+
+    <div class="services">
+      <div class="service">
+        <h3>Social Media Management</h3>
+        <p>Content scheduling, engagement, captions, analytics, and brand consistency.</p>
+      </div>
+
+      <div class="service">
+        <h3>Admin Tasks</h3>
+        <p>Email management, data entry, calendar scheduling, research, and organization.</p>
+      </div>
+
+      <div class="service">
+        <h3>Video Editing</h3>
+        <p>Short-form videos, reels, TikTok, YouTube edits, subtitles, and clean cuts.</p>
+      </div>
+
+      <div class="service">
+        <h3>UGC Content Creation</h3>
+        <p>Authentic user-generated content for ads, social proof, and brand growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="cta">
+      <h2>Let’s Work Together</h2>
+      <p>Ready to delegate tasks and focus on what matters most?</p>
+      <a href="#" class="btn" onclick="alert('Add your WhatsApp, email, or booking link here')">
+        Contact Me
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Avenier Arellano • Virtual Assistant
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
