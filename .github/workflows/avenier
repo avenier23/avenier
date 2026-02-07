@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — selected work, skills, and contact." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#101a33; --text:#eaf0ff; --muted:#a9b6d8;
+      --accent:#7c5cff; --line:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1050px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(124,92,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 85% 30%, rgba(0,195,255,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; backdrop-filter: blur(10px);
+      background: rgba(11,16,32,.55);
+      border-bottom:1px solid var(--line);
+      z-index:10;
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      max-width:var(--max); margin:0 auto; padding:14px 24px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); box-shadow: 0 0 25px rgba(124,92,255,.6);}
+    .links{display:flex; gap:14px; flex-wrap:wrap}
+    .links a{color:var(--muted); padding:8px 10px; border-radius:12px}
+    .links a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.06); box-shadow:var(--shadow);
+    }
+    .btn:hover{border-color:rgba(124,92,255,.6)}
+    .hero{padding:56px 0 24px}
+    .grid{display:grid; grid-template-columns: 1.4fr .8fr; gap:18px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+    }
+    h1{font-size: clamp(34px, 4vw, 52px); margin:0 0 10px}
+    h2{font-size: 22px; margin:0 0 14px}
+    p{margin:0 0 12px; color:var(--muted)}
+    .tagrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .tag{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--muted); font-size:13px;
+    }
+    .kpis{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .kpi{padding:14px; border-radius:16px; border:1px solid var(--line); background:rgba(0,0,0,.12)}
+    .kpi b{display:block; font-size:18px; margin-bottom:4px; color:var(--text)}
+    section{padding:18px 0}
+    .proj{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 900px){.proj{grid-template-columns:1fr}}
+    .proj .item{padding:18px}
+    .meta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .pill{font-size:12px; color:var(--muted); border:1px solid var(--line); padding:6px 10px; border-radius:999px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 900px){.row{grid-template-columns:1fr}}
+    footer{padding:30px 0 40px; color:var(--muted); border-top:1px solid var(--line); margin-top:20px}
+    .small{font-size:13px}
+    input, textarea{
+      width:100%; padding:12px 14px; border-radius:14px; border:1px solid var(--line);
+      background: rgba(0,0,0,.18); color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .formrow{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width: 700px){.formrow{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand"><span class="dot"></span> <span>Your Name</span></div>
+      <div class="links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="grid">
+        <div class="card">
+          <h1>Hi, I’m <span style="color:var(--text)">Your Name</span>.<br/>I build <span style="color:var(--accent)">web products</span>.</h1>
+          <p>
+            A short 1–2 sentence summary of what you do and who you do it for.
+            Example: “Front-end developer focused on fast, accessible sites and delightful UI.”
+          </p>
+          <div class="tagrow">
+            <span class="tag">📍 Manila / Remote</span>
+            <span class="tag">⚡ Front-end • UI</span>
+            <span class="tag">🧠 React • Next.js</span>
+            <span class="tag">✉️ your@email.com</span>
+          </div>
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn" href="#contact">Contact me</a>
+            <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download résumé</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Quick stats</h2>
+          <div class="kpis">
+            <div class="kpi"><b>5+</b><span class="small">Projects shipped</span></div>
+            <div class="kpi"><b>2 yrs</b><span class="small">Experience</span></div>
+            <div class="kpi"><b>Top skills</b><span class="small">React, UI, APIs</span></div>
+            <div class="kpi"><b>Available</b><span class="small">Freelance / Full-time</span></div>
+          </div>
+          <p class="small" style="margin-top:12px">Tip: replace these with real numbers (clients, users, performance, etc.).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="proj">
+        <div class="card item">
+          <h3 style="margin:0 0 6px">Project One</h3>
+          <p>One-liner: what it is, who it helped, and your impact (metrics if possible).</p>
+          <div class="meta">
+            <span class="pill">React</span><span class="pill">API</span><span class="pill">UI</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="https://example.com" target="_blank" rel="noreferrer">Live ↗</a>
+            <a class="btn" href="https://github.com/yourhandle/project" target="_blank" rel="noreferrer">Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card item">
+          <h3 style="margin:0 0 6px">Project Two</h3>
+          <p>What problem you solved + what you built (keep it punchy).</p>
+          <div class="meta">
+            <span class="pill">Next.js</span><span class="pill">TypeScript</span><span class="pill">SEO</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="https://example.com" target="_blank" rel="noreferrer">Case study ↗</a>
+          </div>
+        </div>
+
+        <div class="card item">
+          <h3 style="margin:0 0 6px">Project Three</h3>
+          <p>Add 2–4 projects. Quality beats quantity.</p>
+          <div class="meta">
+            <span class="pill">Design</span><span class="pill">Accessibility</span><span class="pill">Performance</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="https://example.com" target="_blank" rel="noreferrer">Preview ↗</a>
+          </div>
+        </div>
+
+        <div class="card item">
+          <h3 style="margin:0 0 6px">Project Four</h3>
+          <p>Optional: include a short “what I learned” bullet inside the case study link.</p>
+          <div class="meta">
+            <span class="pill">Node</span><span class="pill">Auth</span><span class="pill">Database</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="https://example.com" target="_blank" rel="noreferrer">Live ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT + SKILLS -->
+    <section id="about">
+      <div class="row">
+        <div class="card">
+          <h2>About</h2>
+          <p>
+            Write 3–6 sentences: what you’re good at, what you enjoy building, and what you want next.
+            Add one credibility line (e.g., “Previously at…”, “Built for…”, “Shipped X…”, “Open-source contributor…”).
+          </p>
+          <p class="small">Optional: add a profile photo here later.</p>
+        </div>
+
+        <div class="card" id="skills">
+          <h2>Skills</h2>
+          <div class="tagrow">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span><span class="tag">REST/GraphQL</span><span class="tag">Figma</span>
+            <span class="tag">Testing</span><span class="tag">SEO</span><span class="tag">Accessibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="row">
+        <div class="card">
+          <h2>Contact</h2>
+          <p>
+            Want to work together? Email me at
+            <a href="mailto:your@email.com" style="color:var(--text); text-decoration:underline">your@email.com</a>
+            or send a message here.
+          </p>
+
+          <!-- Static form (uses mailto). For real submissions, use Formspree / Netlify Forms / serverless -->
+          <form onsubmit="return sendMail(event)">
+            <div class="formrow">
+              <div>
+                <label class="small" for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label class="small" for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+              </div>
+            </div>
+            <div style="margin-top:12px">
+              <label class="small" for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <div style="margin-top:12px">
+              <button class="btn" type="submit">Send message</button>
+            </div>
+          </form>
+          <p class="small" style="margin-top:10px">
+            Tip: for a real contact form without backend, use Formspree or Netlify Forms.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Links</h2>
+          <p class="small">Add the links you actually use.</p>
+          <div class="tagrow">
+            <a class="btn" href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="btn" href="https://x.com/yourhandle" target="_blank" rel="noreferrer">X ↗</a>
+            <a class="btn" href="https://yourblog.com" target="_blank" rel="noreferrer">Blog ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Your Name. Built with HTML/CSS.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+
+      const subject = encodeURIComponent("Portfolio inquiry");
+      const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\n${decodeURIComponent(message)}`);
+
+      window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
